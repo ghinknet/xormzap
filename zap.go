@@ -43,7 +43,9 @@ func (l *LoggerAdapter) AfterSQL(lc log.LogContext) {
 		level = zapcore.InfoLevel
 	}
 
-	lg.Check(level, "finished sql").Write(zap.String("sql", sql), zap.Duration("execute_time", lc.ExecuteTime), zap.Error(lc.Err))
+	lg.Check(level, "finished sql").Write(
+		zap.String("sql", sql), zap.Duration("execute_time", lc.ExecuteTime), zap.Error(lc.Err),
+	)
 }
 
 func (l *LoggerAdapter) Debugf(format string, v ...interface{}) {

@@ -1,2 +1,5 @@
 # xormzap
-zap logger for xorm
+Xorm logger adapter for Zap
+
+## Usage:
+`databaseEngine.SetLogger(xormzap.Logger(logger))`
