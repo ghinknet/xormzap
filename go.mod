@@ -1,9 +1,9 @@
-module github.com/ghinknet/xormzap
+module go.gh.ink/xormzap
 
 go 1.21
 
 require (
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.27.1
 	xorm.io/xorm v1.3.11
 )
 
